@@ -23,8 +23,6 @@ class Solution:
         cursum = 0
         for x in nums:
             cursum += x
-            if cursum < 0:
-                cursum = x
             cursum = max(cursum, x)
             ans = max(cursum, ans)
         return ans
@@ -33,3 +31,42 @@ class Solution:
 
 # 时间复杂度O(n)
 # 空间复杂度O(1)
+
+
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        n = len(nums)
+        if n == 1:
+            return nums[0]
+        else:
+            max_left = self.maxSubArray(nums[0:n//2])
+            max_right = self.maxSubArray(nums[n//2:n])
+
+        #最长子数组从中间穿过
+        max_l = nums[n // 2 - 1]
+        tmp = 0
+        for i in range(n // 2 - 1, -1, -1):
+            tmp += nums[i]
+            max_l = max(tmp, max_l)
+
+        max_r = nums[n // 2]
+        tmp = 0
+        for i in range(n // 2, n):
+            tmp += nums[i]
+            max_r = max(tmp, max_r)
+
+        return max(max_right, max_left, max_l + max_r)
+
+# 使用分治,递归的方法
+
+# case1. 最大连续子数组在左半部分
+# case2. 最大连续子数组在右半部分
+# case3. 最大连续子数组从中间穿过
+# 结果就是这三个case中最大的情况
+# 当处理case3时, 先确定中间的两个元素,然后分别从中间向两边,求得连续的元素和的最大值.
+# 也就是,逐渐累加左右部分各个元素之后的一个最大值,因为不用知道确切的是中间到两边具体的
+# 范围,所以累加就可以解决问题.
+
+# 时间复杂度O(nlgn) T(n) = 2T(n/2) + O(n).
+# 空间复杂度O(lgn) 因为两个递归调用有2lg(n/2)深的调用栈.
+
