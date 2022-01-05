@@ -25,5 +25,5 @@ class Solution:
 # 比较x剩余部分的数值, 和right_part的数值大小, 如果x是偶数,那么如果回文的话那么x == right_part
 # 如果x是奇数, 那么x == right_part // 10
 
-# 时间复杂度 O(n)
+# 时间复杂度 O(lgn) 因为只需要遍历一半n的10进制位数
 # 空间复杂度 O(1)
