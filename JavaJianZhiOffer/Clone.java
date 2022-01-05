@@ -1,5 +1,3 @@
-
-
 public class Clone {
 	public class RandomListNode {
 	    int label;

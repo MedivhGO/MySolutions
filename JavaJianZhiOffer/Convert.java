@@ -1,4 +1,3 @@
-
 public class Convert {
 	public class TreeNode {
 	    int val = 0;
