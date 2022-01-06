@@ -10,7 +10,7 @@ class Solution:
             pprev = prev
             prev = ans
         return ans
-            
+
 # 使用递推的动态规划
 
 # 时间复杂度 O(n)

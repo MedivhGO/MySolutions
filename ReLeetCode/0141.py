@@ -10,9 +10,7 @@ class Solution:
             if fast == slow:
                 return True
 
-        return False
-        
-        
+        return False 
 # 快慢指针
 
 # 时间复杂度 O(n)

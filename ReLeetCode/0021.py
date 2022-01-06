@@ -26,7 +26,7 @@ class Solution:
             cur_ptr = cur_ptr.next
 
         return dummy.next
-            
+ 
 # 申请一个dummy node来简化合并操作
 
 # 时间复杂度 O(m+n)
