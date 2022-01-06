@@ -2,16 +2,16 @@ class Solution:
     def addStrings(self, num1: str, num2: str) -> str:
         if len(num1) == 0:
             return num2
-        
+
         if len(num2) == 0:
             return num1
-        
+
         num1_number = []
         num2_number = []
 
         for e in num1:
             num1_number.append(int(e))
-        
+
         for e in num2:
             num2_number.append(int(e))
 
@@ -25,7 +25,7 @@ class Solution:
             digital = (num1_number[i] + num2_number[i] + carry) % 10
             ans_number.append(digital)
             carry = (num1_number[i] + num2_number[i] + carry) // 10
-        
+
         for i in range(common_length, len(num1)):
             digital = (num1_number[i] + carry) % 10
             ans_number.append(digital)
@@ -35,7 +35,7 @@ class Solution:
             digital = (num2_number[i] + carry) % 10
             ans_number.append(digital)
             carry =  (num2_number[i] + carry) // 10
-        
+
         if carry != 0:
             ans_number.append(carry)
 
@@ -43,9 +43,8 @@ class Solution:
         ans_str = ''
         for x in ans_number:
             ans_str += str(x)
-        
+
         return ans_str
-        
 
 # 模拟
 

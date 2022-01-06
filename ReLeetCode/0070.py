@@ -6,7 +6,7 @@ class Solution:
             return 1
         if n == 2:
             return 2
-        
+
         dp = (n + 1) * [0]
         dp[0] = 0
         dp[1] = 1
@@ -28,7 +28,7 @@ class Solution:
             return 1
         if n == 2:
             return 2
-        
+
         pprev = 1
         prev = 2
         ans = 0
@@ -36,7 +36,7 @@ class Solution:
             ans = prev + pprev
             pprev = prev
             prev = ans
-            
+
         return ans
 
 # 由第一种解法可进行空间压缩

@@ -6,7 +6,7 @@ class Solution:
             if x in s1:
                 ans.append(x)
         return list(set(ans))
-        
+
 
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:

@@ -8,18 +8,18 @@ class Solution:
             prev = cur_head
             cur_head = tmp
         return prev
-    
+
     def isPalindrome(self, head: ListNode) -> bool:
         if head == None or head.next == None:
             return True
-        
+
         fast = head
         slow = head
 
         while fast and fast.next:
             fast = fast.next.next
             slow = slow.next
-        
+
         raw_begin = head
         raw_end = slow
         begin = self.reverseList(slow)
@@ -29,7 +29,7 @@ class Solution:
                 return False
             raw_begin = raw_begin.next
             begin = begin.next
-        
+
         return True
 
 # 先找到中间位置

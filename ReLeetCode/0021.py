@@ -14,7 +14,7 @@ class Solution:
                 cur_ptr.next = l2
                 l2 = l2.next
                 cur_ptr = cur_ptr.next
-        
+
         while l1:
             cur_ptr.next = l1
             l1 = l1.next
@@ -25,7 +25,6 @@ class Solution:
             l2 = l2.next
             cur_ptr = cur_ptr.next
 
-        
         return dummy.next
             
 # 申请一个dummy node来简化合并操作
