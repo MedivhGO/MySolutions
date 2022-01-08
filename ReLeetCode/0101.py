@@ -22,3 +22,28 @@ class Solution:
 # 时间复杂度 O(n)
 # 空间复杂度 O(n)
 
+class Solution:
+    def isSymmetric(self, root: TreeNode) -> bool:
+        # 把左右两个孩子当作一个元组, 一起入队
+        queue = collections.deque()
+        queue.append((root.left, root.right))
+        while len(queue) != 0:
+            item = queue.popleft()
+            left, right = item[0], item[1]
+            if not left and not right:
+                continue
+            if not left or not right:
+                return False
+            if left.val != right.val:
+                return False
+            queue.append((left.left, right.right)) # 为了避免每次出队两个元组
+            queue.append((left.right, right.left)) # 所以把镜像的一组放到同一个元组里
+        return True
+
+# 把根节点的左右孩子作为元组入队, 出队->判断左右孩子的情况, 将左孩子的左孩子和右孩子的右孩子
+# 放入到一个元组中入队, 同理处理右孩子.
+# 一直出队, 入队处理完所有节点
+
+# 时间复杂度 O(n)
+# 空间复杂度 o(n)
+
