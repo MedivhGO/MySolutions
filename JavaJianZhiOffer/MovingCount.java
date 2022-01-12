@@ -3,14 +3,13 @@ import java.util.ArrayList;
 public class MovingCount {
     int ans = 0;
     public int MovingCount(int threshold, int rows, int cols) {
-        
-        if (rows <0 || cols <0) return ans;
+        if (rows < 0 || cols < 0) return ans;
         ArrayList<Boolean> table = new ArrayList<Boolean>();
         for (int i = 0; i < cols*rows;i++) {
             table.add(false);
         }
-        
-        fun(threshold,0,0,rows,cols,table);
+
+        fun(threshold, 0, 0, rows, cols, table);
         return ans;
     }
 
@@ -18,20 +17,24 @@ public class MovingCount {
         if (row>rows || col>cols) {
             return;
         } else if (cal(row)+cal(col)>threshold) {
-            return ;
+            return;
         } else if (table.get(row*cols+col) == true){
-            return ;
+            return;
         } else {
             table.set(row*cols+col, true);
             ans++;
-            if (row+1<rows)
+            if (row+1<rows) {
                 fun(threshold,row+1,col,rows,cols,table);
-            if (row-1>=0)
+            }
+            if (row-1>=0) {
                  fun(threshold,row-1,col,rows,cols,table);
-            if (col+1<cols) 
+            }
+            if (col+1<cols) {
                  fun(threshold,row,col+1,rows,cols,table);
-            if (col-1>=0) 
+            }
+            if (col-1>=0) {
                  fun(threshold,row,col-1,rows,cols,table);
+            }
             return;
         }
     }

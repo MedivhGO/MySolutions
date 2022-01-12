@@ -11,7 +11,6 @@ public class RectCover {
             n2 = n1+n2;
             n1 = t;
         }
-
         return n2;
     }
 }

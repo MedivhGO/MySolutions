@@ -4,12 +4,11 @@ public class IsNumeric {
         if((s.length==1)&&(s[0]<'0'||s[0]>'9')) return false;
         if(s[0]=='+'||s[0]=='-'){
             if(s.length==2&&(s[1]=='.')) return false;
-        }else if((s[0]<'0'||s[0]>'9')&&s[0]!='.') return false;//首位既不是符号也不是数字还不是小数点，当然是false
+        } else if((s[0]<'0'||s[0]>'9')&&s[0]!='.') return false;// 棣栦綅鏃笉鏄鍙蜂篃涓嶆槸鏁板瓧杩樹笉鏄皬鏁扮偣锛屽綋鐒舵槸false
         int i = 1;
         while((i<s.length)&&(s[i]>='0'&&s[i]<='9')) i++;
         if(i<s.length&&s[i]=='.'){
             i++;
-            //if(i>=s.length) return false;
             while((i<s.length)&&(s[i]>='0'&&s[i]<='9')) i++;
         }
         if(i<s.length&&(s[i]=='e'||s[i]=='E')){
@@ -22,7 +21,7 @@ public class IsNumeric {
                 while((i<s.length)&&(s[i]>='0'&&s[i]<='9')) i++;
             }else return false;
         }
-        if(i<s.length) return false;            
-        return true;        
+        if(i<s.length) return false;
+        return true;
     }
 }
