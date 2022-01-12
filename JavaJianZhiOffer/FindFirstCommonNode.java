@@ -1,17 +1,17 @@
 
 
 public class FindFirstCommonNode {
-	public class ListNode {
-	    int val;
-	    ListNode next = null;
+    public class ListNode {
+        int val;
+        ListNode next = null;
 
-	    ListNode(int val) {
-	        this.val = val;
-	    }
-	}
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
     public ListNode FindFirstCommonNode(ListNode pHead1, ListNode pHead2) {
- 			if (pHead1==null || pHead2 == null) return null;
-        	int len1 = 0;
+             if (pHead1==null || pHead2 == null) return null;
+            int len1 = 0;
             ListNode p = pHead1;
             while (p!=null) {
                 len1++;
@@ -43,6 +43,6 @@ public class FindFirstCommonNode {
             return p;
     }
     public static void  main(String[] args) {
-    	
+        
     }
 }

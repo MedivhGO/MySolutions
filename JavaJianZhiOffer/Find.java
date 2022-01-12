@@ -7,19 +7,19 @@ public class Find {
         int prowfirst = 0;
         int pcollast = col-1;
         while (prowfirst < row && pcollast >=0) {
-        	if (target > array[prowfirst][pcollast]) {
-        		prowfirst++;
-        	} else if (target < array[prowfirst][pcollast]) {
-        		pcollast--;
-        	} else {
-        		return true;
-        	}
+            if (target > array[prowfirst][pcollast]) {
+                prowfirst++;
+            } else if (target < array[prowfirst][pcollast]) {
+                pcollast--;
+            } else {
+                return true;
+            }
         }
         
         return false;
         
     }
     public static void main(String[] args) {
-    	
+        
     }
 }
