@@ -2,27 +2,26 @@ import java.util.ArrayList;
 
 public class MovingCount {
     int ans = 0;
-    public int MovingCount(int threshold, int rows, int cols)
-    {
+    public int MovingCount(int threshold, int rows, int cols) {
         
         if (rows <0 || cols <0) return ans;
         ArrayList<Boolean> table = new ArrayList<Boolean>();
         for (int i = 0; i < cols*rows;i++) {
-        	table.add(false);
+            table.add(false);
         }
         
         fun(threshold,0,0,rows,cols,table);
         return ans;
     }
+
     public void fun(int threshold,int row,int col,int rows,int  cols,ArrayList<Boolean> table) {
         if (row>rows || col>cols) {
             return;
         } else if (cal(row)+cal(col)>threshold) {
             return ;
-        }else if (table.get(row*cols+col) == true){
-            return ;	
-        }
-        else {
+        } else if (table.get(row*cols+col) == true){
+            return ;
+        } else {
             table.set(row*cols+col, true);
             ans++;
             if (row+1<rows)
@@ -36,6 +35,7 @@ public class MovingCount {
             return;
         }
     }
+
     int cal(int num) {
         int ans = 0;
         while (num!=0) {

@@ -6,25 +6,25 @@ public class TwoStack {
     private boolean flag = true;
     public void push(int node) {
        if (stack1.isEmpty()!=true) {
-    	   	  stack1.push(node);
-           	  flag = true;
+                 stack1.push(node);
+                 flag = true;
        }
        else { 
-    	   	  stack2.push(node);
-    	   	  flag = false;
+                 stack2.push(node);
+                 flag = false;
        }
     } 
-    public int pop() { // ½«·Ç¿ÕµÄÕ»ÖĞÔªËØÖğ¸ö³öÕ»µ½¿ÕÕ»£¬È»ºó³öÕ»ÆäÕ»¶¥ÔªËØ
-    		if (flag == true) {
-    			while (stack1.isEmpty() == false) {
-    				stack2.push(stack1.pop());
-    			}
-    			return stack2.pop();
-    		} else {
-    			while (stack2.isEmpty() == false) {
-    				stack1.push(stack2.pop());
-    			}
-    			return stack1.pop();
-    		}
+    public int pop() { // å°†éç©ºçš„æ ˆä¸­å…ƒç´ é€ä¸ªå‡ºæ ˆåˆ°ç©ºæ ˆï¼Œç„¶åå‡ºæ ˆå…¶æ ˆé¡¶å…ƒç´ 
+            if (flag == true) {
+                while (stack1.isEmpty() == false) {
+                    stack2.push(stack1.pop());
+                }
+                return stack2.pop();
+            } else {
+                while (stack2.isEmpty() == false) {
+                    stack1.push(stack2.pop());
+                }
+                return stack1.pop();
+            }
     }
 }

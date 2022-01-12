@@ -17,7 +17,7 @@ public class ReOrderArray {
                 array[later] = t;
             }
         }
-        return ;
+        return;
     }
     public static void main(String[] args) {}
 }

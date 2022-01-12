@@ -1,6 +1,6 @@
 public class Power {
     public static double Power(double base, int exponent) {
-    	  if (exponent == 0) return 1;
+          if (exponent == 0) return 1;
           if (exponent == 1) return base;
           int binary = 0;
           int flag = 0;
@@ -19,7 +19,7 @@ public class Power {
           else return 1/ans;
     }
     public static void main(String[] args) {
-    	System.out.println(Power(2,-3));
+        System.out.println(Power(2,-3));
     }
     
 }
