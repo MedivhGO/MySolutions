@@ -14,7 +14,6 @@ public class GetLeastNumbers_Solution {
                     return o2.compareTo(o1);
                 }
             });
-            
             for(int i = 0; i < len;i++) {
                 if (maxHeap.size() !=k) {
                     maxHeap.offer(input[i]);

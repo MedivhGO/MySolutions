@@ -1,12 +1,10 @@
 import java.util.*;
 
 public class FirstAppearingOnce {
-    
     //Insert one char from stringstream
     HashMap<Character,Integer> hm = new HashMap<>();
     ArrayList<Character> cla = new ArrayList<>();
-    public void Insert(char ch)
-    {
+    public void Insert(char ch) {
         if (hm.containsKey(ch)) {
             hm.put(ch,hm.get(ch)+1);
         } else {
@@ -16,8 +14,7 @@ public class FirstAppearingOnce {
         
     }
   //return the first appearence once char in current stringstream
-    public char FirstAppearingOnce()
-    {
+    public char FirstAppearingOnce() {
         char ans = '#';
         for (char t : cla) {
             if (hm.get(t) == 1) {
@@ -26,7 +23,5 @@ public class FirstAppearingOnce {
             }
         }
         return ans;
-        
-        
     }
 }

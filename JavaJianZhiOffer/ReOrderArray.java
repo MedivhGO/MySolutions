@@ -11,7 +11,6 @@ public class ReOrderArray {
             while (pre < later && array[later]%2 == 0) {
                 later--;
             }
-            
             if (pre < later) {
                 int t = array[pre];
                 array[pre] = array[later];
@@ -20,7 +19,5 @@ public class ReOrderArray {
         }
         return ;
     }
-    public static void main(String[] args) {
-        
-    }
+    public static void main(String[] args) {}
 }
