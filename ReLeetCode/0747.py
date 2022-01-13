@@ -25,7 +25,10 @@ class Solution:
 # max_elem >= 2 * third_elem
 # ......
 # max_elem >= 2 * secondary_elem >= 2 * third_elem >= 2 * fourth_elem
-# 可以总结出只要满足 max_elem >= 2 * secondary_elem就可以.
+# 可以总结出只要满足max_elem >= 2 * secondary_elem就可以让其他不等式成立
+
+# python要初始化一个最小值和最大值变量
+# 可以使用float('-inf'), float('inf')
 
 # 时间复杂度 O(n)
 # 空间复杂度 O(1)
