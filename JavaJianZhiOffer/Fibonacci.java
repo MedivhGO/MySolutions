@@ -7,7 +7,7 @@ public class Fibonacci {
        if (n == 1) return last;
        if (n == 2) return cur;
        for (int i = 3 ; i<=n;i++) {
-           int t = cur; //cur »á±»¸Ä±äËùÒÔ¼ÇÂ¼
+           int t = cur; //cur ä¼šè¢«æ”¹å˜æ‰€ä»¥è®°å½•
            cur = last + cur;
            last = t;
        }
