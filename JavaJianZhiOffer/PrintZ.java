@@ -41,6 +41,7 @@ public class PrintZ {
         }
         return al;
     }
+
     ArrayList<ArrayList<Integer> > PrintZ1(TreeNode pRoot){
         ArrayList<ArrayList<Integer>> al = new ArrayList<ArrayList<Integer>>();
         if (pRoot == null) return al;
@@ -77,6 +78,8 @@ public class PrintZ {
         }
         return al;
     }
+
     public static void main(String[] args) {
+
     }
 }
