@@ -17,6 +17,9 @@ class Solution:
         return ans
 
 # BFS
+# 使用collections.deque定义双端队列.
+# 使用popleft()方法从队头出队, appendleft()方法对头入队.
+# append()方法队尾入队, pop()方法从队尾出队.
 
 # 时间复杂度 O(n)
 # 空间复杂度 O(n) 最差情况下, (当树平衡时), 队列queue同时存储N/2个节点.
