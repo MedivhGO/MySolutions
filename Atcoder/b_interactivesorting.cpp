@@ -10,7 +10,6 @@ int main()
 {
     int n, qn;
     cin >> n >> qn;
-    
     string str;
     for (int i = 0; i < n; ++i) {
         str += char('A' + i);
