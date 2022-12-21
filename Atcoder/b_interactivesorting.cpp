@@ -3,6 +3,8 @@
 
 using namespace std;
 
+// 只能通过 tc1
+
 int main()
 {
     int n, qn;
