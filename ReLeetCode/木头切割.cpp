@@ -27,7 +27,6 @@ bool check(vector<int> data, int k, int m) {
     return cnt >= k;
 }
 
-
 int binary_find_maxm(vector<int> data, int k) {
     int max_number = *std::max_element(data.begin(), data.end());
     int left = 1, right = max_number;
@@ -45,7 +44,7 @@ int binary_find_maxm(vector<int> data, int k) {
 
 int main()
 {
-    vector<int> input{ 10,20,30,12,23 };
+    vector<int> input{10, 20, 30, 12, 23};
     int res1 = find_maxm(input, 5);
     int res2 = binary_find_maxm(input, 5);
     if (res1 == res2) {
